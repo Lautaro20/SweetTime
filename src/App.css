@@ -1,38 +1,336 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Mifuente";
+  src: url("../src/recursos/fuentes/Appetite/Appetite.otf");
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+  background-color: #F59974;
+  display: flex;
+  justify-content: space-between;
+  color: #FCEAD6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Logo{
+  
+  background-color: #FBD197;
+  padding: 15px;
+  border-bottom-right-radius: 200px;
+  font-family: "Mifuente";
+}
+
+.ElementNav{
+  font-family: "Mifuente";
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.Element{
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #FCEAD6;
+}
+
+.ContPresentacion{
+  display: flex;
+
+}
+
+.presentaciontext{
+  color: #F59974;
+  width: 50%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 35px;
+}
+
+.text1{
+  padding: 15px;
+  font-family: "Mifuente";
+  font-size: 40px;
+  line-height: 1.5;
+}
+
+.text2{
+  width: 300px;
+}
+
+
+.circulo{
+  margin-top: 40px;
+  margin-left: 50px;
+  background-color: #F59974;
+  border-radius: 50%;
+  width: 300px;
+  height: 280px;
+}
+
+.presentacionimagen{
+  position: relative;
+}
+
+.tortaspre{
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 120px;
+  left: 80px;
+  transform: scaleX(-1);
+  z-index: 2;
+}
+
+.tortitapre{
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  top: 30px;
+  left: -30px;
+  z-index: 1;
+}
+
+.licuado{
+  position: absolute;
+  width: 180px;
+  height: 220px;
+  top: 50px;
+  left: 160px;
+  z-index: 1;
+}
+
+
+.Historia{
+  background-color: #F59974;
+  margin-top: 10px;
+  padding-top: 2px;
+  border-top-right-radius: 50%;
+  color: #FCEAD6;
+}
+
+.h3historia1{
+  font-family: "Mifuente";
+  margin-left: 85px;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
+
+.h3historia2{
+  font-family: "Mifuente";
+  margin-left: 130px;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.continfo{
+  display: flex;
+  padding: 20px;
+}
+
+.info{
+  margin: 0px 30px 30px 30px;
+  width: 250px;
+  padding-top: 30px;
+}
+
+.info2{
+  margin: 0px 30px 30px 30px;
+  padding-top: 30px;
+}
+
+.info3{
+  margin: 0px 30px 30px 30px;
+  padding-top: 30px;
+}
+
+.contpro{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.Contenedorproductos{
+   display: grid;
+   justify-items: center;
+   background-color: #F59974;
+   border-radius: 20px;
+}
+
+.Contenedorproductos h2{
+  margin: 10px;
+  color: #FCEAD6;
+}
+
+.Contenedorproductos img{
+  border-radius: 20px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.Boton{
+  cursor: pointer;
+  background-color: #FBD197;
+  
+  border-radius: 30px;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: solid #FBD197;
+  color: #F59974;
+  text-decoration: none;
+}
+
+.Boton:hover{
+  cursor: pointer;
+  border-color: #FBD197;
+  color: #FBD197;
+  background-color: #F59974;
+}
+
+.inforeccontenedor{
+  background-color: #F59974;
+  margin: 20px;
+  border-radius: 20px;
+  display: grid;
+  justify-items: center;
+  row-gap: 10px;
+  padding: 10px;
+}
+
+.inforeccontenedor img{
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.inforecetatitulo{
+  font-family: "Mifuente";
+  font-size: 40px;
+  line-height: 2;
+  color: #FCEAD6;
+}
+
+.contenedorsesion{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.contenedorsesesion2{
+  font-family: "Mifuente";
+  background-color: #F59974;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+}
+.iniciodesecion{
+  color: #FCEAD6;
+  margin-bottom: 50px;
+  font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.crearcuenta{
+  color: #FCEAD6;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.formularioinisiocesion{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+
+}
+
+.formulariocrearcuenta{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+
+}
+
+.botonsesion{
+  text-align: center;
+}
+
+input{
+  margin: 10px;
+  height: 35px;
+  width: 300px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Mifuente";
+}
+
+.botonsesion1{
+  height: 35px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #FBD197;
+  cursor: pointer;
+}
+
+.cerracesion1{
+  height: 35px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #FBD197;
+  cursor: pointer;
+}
+
+.cerrarsesion2{
+  color: #FCEAD6;
+  font-family: "Mifuente";
+  border: none;
+  background-color: #F59974;
+  margin-left: 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.contadv1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.contadv{
+  font-family: "Mifuente";
+  background-color: #F59974;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 350px;
+  border-radius: 20px;
+}
+.adv{
+  font-size: 40px;
 }
